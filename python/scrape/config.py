@@ -9,6 +9,6 @@ COLUMNS = [
   "downloaded",
 ]
 
-CREATE_TABLE = """ CREATE TABLE IF NOT EXISTS """+TABLE+''' (item text NOT NULL, downloaded boolean NOT NULL);'''
+CREATE_TABLE = """ CREATE TABLE IF NOT EXISTS """+TABLE+''' (item text NOT NULL, downloaded text NOT NULL);'''
 
 

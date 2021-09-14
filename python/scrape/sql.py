@@ -19,7 +19,6 @@ def add_AP(database_file, new_ap):
     connection.close()
 
 def get_all(database_file):
-    db_results = []
     query = (
         "SELECT * FROM " + config.TABLE + " ;"
     )
@@ -29,8 +28,7 @@ def get_all(database_file):
     results = cursor.fetchall()
     cursor.close()
     connection.close()
-    for i in results:
-      db_results.append(i)
+    return [i for i in results]
 
 def get_name(database_file, ap):
     query = (
